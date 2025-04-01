@@ -1,7 +1,8 @@
+import './DigitalClock.css'
 export default class DigitalClockComponents extends HTMLElement {
   constructor() {
     super();
-    this.innerHTML = `    
+    this.markup = `    
     <main class="container">
       <div class="clock">
         <span class="hours">00</span><span class="divider">:</span>
@@ -10,6 +11,7 @@ export default class DigitalClockComponents extends HTMLElement {
       </div>
     </main>
   `;
+    this.innerHTML = this.markup;
   }
 
   connectedCallback() {
